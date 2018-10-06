@@ -1,0 +1,34 @@
+body
+{ 
+    margin: 0;
+    background: none;
+    font-family: sans-serif;
+    background: whitesmoke;
+}
+#header
+{   margin: 0;
+    padding: 0;
+    background: transparent;
+   background: url("/945625dd9c15f1b.jpg") no-repeat;
+    color: white;
+ 
+}
+#logform
+{
+    border: none;
+    background:none;
+    outline: none;
+    font-family: sans-serif;
+    position: absolute;
+    left: 70%;
+    color: #f412f3;
+}
+#lbtn
+{
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: transparent;
+    background: url("/Login_Button.png") no-repeat;
+
+}

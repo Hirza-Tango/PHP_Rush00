@@ -1,0 +1,56 @@
+body
+{ 
+
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/wheat_1.jpg") no-repeat;
+    font-family: sans-serif;
+    background-size: cover ;
+    background-position: center;
+}
+#signup
+{
+ 
+    outline: none;
+    height: 600px;
+    width: 700px;
+    border: none;
+    bottom: 50%;
+    left: 50%; 
+    position: fixed;
+    transform : translate(-50%,30%);
+    text-align: center;
+    box-sizing: border-box;  
+   
+    outline: none;
+    background: transparent;
+    background: white;
+
+}
+#signup h1
+{
+    outline: none;
+    background: transparent;
+}
+#lbl
+{
+    padding: 10px;
+    font-family: sans-serif;
+    color: rgb(12,3,123,0.9);
+}
+#signup input
+{
+    margin-bottom: 10px; 
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    background: transparent;
+
+}
+#signup input[type="Submit"]
+{
+    width: 40%;
+    font-weight: bold;
+    border: 1px solid gray;
+    padding: 20px;
+}
