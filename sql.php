@@ -1,8 +1,7 @@
 <?php
+require_once("config.php");
+
 function create_user($user_form) {
-	$db = mysqli_connect("localhost", "root", "root", "RUSH00");
-	if (!$db)
-		return "Connection error";
 	$stmt = mysqli_prepare($db, file_get_contents("queries/create_user.mysql"));
 	if (!preg_match("\w+@\w+\.\w{2-3}", $user_form['username']))
 		return false;
@@ -31,18 +30,12 @@ function create_user($user_form) {
 }
 
 function auth($username, $passwd) {
-	$db = mysqli_connect("localhost", "root", "root", "RUSH00");
-	if (!$db)
-		return "Connection error";
 	$stmt = mysqli_prepare($db, file_get_contents("queries/auth.mysql"));
 	mysqli_bind_param($stmt, "ss", $username, hash("sha512", $passwd));
 	return (bool(mysqli_stmt_get_result($stmt)));
 }
 
 function get_user($username) {
-	$db = mysqli_connect("localhost", "root", "root", "RUSH00");
-	if (!$db)
-		return "Connection error";
 	$stmt = mysqli_prepare($db, file_get_contents("queries/get_user.mysql"));
 	mysqli_bind_param($stmt, "s", $username);
 	$result = mysqli_stmt_get_result($stmt);
