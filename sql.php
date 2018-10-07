@@ -30,8 +30,8 @@ function create_user($user_form) {
 	$result = mysqli_stmt_execute($query_create_user);
 	if ($result)
 		mysqli_stmt_execute($query_create_order);
-	mysqli_stmt_close($query_create_order);
-	mysqli_stmt_close($query_create_user);
+	//mysqli_stmt_close($query_create_order);
+	//mysqli_stmt_close($query_create_user);
 	return ($result);
 }
 
@@ -41,7 +41,7 @@ function auth($username, $passwd) {
 	mysqli_stmt_execute($query_auth);
 	mysqli_stmt_bind_result($query_auth, $result);
 	mysqli_stmt_fetch($query_auth);
-	mysqli_stmt_close($query_auth);
+	//mysqli_stmt_close($query_auth);
 	return ($result);
 }
 
@@ -115,7 +115,7 @@ function get_products($category){
 	mysqli_stmt_bind_result($query_get_products, $a, $b, $c, $d);
 	while (mysqli_stmt_fetch($query_get_products))
 		$result[] = Array($a, $b, $d);
-	mysqli_stmt_close($query_get_products);
+	//mysqli_stmt_close($query_get_products);
 	return($result);
 }
 
@@ -125,15 +125,26 @@ function get_all_products(){
 	mysqli_stmt_bind_result($query_get_all_products, $a, $b, $c, $d);
 	while (mysqli_stmt_fetch($query_get_all_products))
 		$result[] = Array($a, $b, $d);
-	mysqli_stmt_close($query_get_all_products);
+	//mysqli_stmt_close($query_get_all_products);
 	return ($result);
+}
+
+function get_item($product){
+	global $query_get_item;
+	mysqli_stmt_bind_param($query_get_item, "s", $product);
+	mysqli_stmt_execute($query_get_item);
+	mysqli_stmt_bind_result($query_get_item, $a, $b, $c, $d);
+	mysqli_stmt_fetch($query_get_item);
+	$result = Array($a, $b, $d, $query_get_item);
+	//mysqli_stmt_close($query_get_item);
+	return($result);
 }
 
 function add_to_basket($product, $username){
 	global $query_add_to_basket;
 	mysqli_stmt_bind_param($query_add_to_basket, "ss", $username, $product);
 	$result = mysqli_stmt_execute($query_add_to_basket);
-	mysqli_stmt_close($query_add_to_basket);
+	//mysqli_stmt_close($query_add_to_basket);
 	return ($result);
 }
 

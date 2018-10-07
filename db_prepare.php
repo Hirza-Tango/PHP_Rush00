@@ -18,4 +18,5 @@ $query_get_basket = mysqli_prepare($db, file_get_contents("queries/get_basket.my
 $query_remove_from_basket = mysqli_prepare($db, file_get_contents("queries/remove_from_basket.mysql"));
 $query_submit_basket = mysqli_prepare($db, file_get_contents("queries/submit_basket.mysql"));
 $query_create_order = mysqli_prepare($db, file_get_contents("queries/create_order.mysql"));
+$query_get_item = mysqli_prepare($db, file_get_contents("queries/get_item.mysql"));
 ?>

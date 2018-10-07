@@ -28,7 +28,7 @@
                 echo '<a href="signup.html">Sign Up</a><a href="login.html">Login</a>';
             }
             ?>
-        <a href="cart.html"><img  src= "/img/cart-icon-14 (1).png" height="40" ></a>
+        <a href="cart.php"><img  src= "/img/cart-icon-14 (1).png" height="40" ></a>
     </div>
     </div>
     <div id = "page">

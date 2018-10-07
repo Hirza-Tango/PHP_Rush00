@@ -11,9 +11,16 @@
         <div id="head">
             <img src="/img/Screen Shot 2018-10-06 at 23.15.37.png" height="70" width="250">
             <div id="right">
-                <a href="signup.html">Sign Up</a> 
-                <a href="login.html">Login</a>
-                <a href="cart.html"><img  src= "/img/cart-icon-14 (1).png" height="40" ></a>
+            <?php
+            session_start();
+            if ($_SESSION['username']) {
+                echo "<h3>Welcome, ", $_SESSION['full_name'], "</h3>";
+                echo '<a href="logout.php">Logout</a>';
+            } else {
+                echo '<a href="signup.html">Sign Up</a><a href="login.html">Login</a>';
+            }
+            ?>
+                <a href="cart.php"><img  src= "/img/cart-icon-14 (1).png" height="40" ></a>
             </div>
         </div>   
         <div id = "cen"> 
@@ -24,12 +31,17 @@
                 <th>Price </th>
                 <th>Total </th>
             </tr>
-            <tr>
-                <td>Cap </td>
-                <td>R: 139.99 </td>
-                <td>R: 139.99 </td>
-                <td><a href=""><img src="/img/458594.png" width="20" height="20"/></a></td>   
-            </tr>
+            <?php
+                require_once("sql.php");
+                session_start();
+                $total = 0;
+                foreach ($_SESSION['cart'] as $e)
+                {
+                    
+                    $i = get_item($e);
+                    echo '<tr><td>', $e,"</td><td>R ", $i[1],"</td><td>R ", $total += $i[1], "</td></tr>";
+                }
+            ?>
         </table>
         <a href="pay.html"><input type="button" value="Pay Order"></a>
     </div>
