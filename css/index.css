@@ -103,3 +103,13 @@ table td input[type="button"]:hover
     text-align: left;
     color: black;
 }
+#catag 
+{
+    border : none;
+    color : white;
+    background:white;
+    float: left;
+    left:30%;
+    top:1%;
+    position: absolute;
+}
