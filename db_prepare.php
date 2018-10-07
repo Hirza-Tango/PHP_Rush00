@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+global $db;
 $query_create_user = mysqli_prepare($db, file_get_contents("queries/create_user.mysql"));
 $query_auth = mysqli_prepare($db, file_get_contents("queries/auth.mysql"));
 $query_get_user = mysqli_prepare($db, file_get_contents("queries/get_user.mysql"));
@@ -15,4 +16,5 @@ $query_add_to_basket = mysqli_prepare($db, file_get_contents("queries/add_to_bas
 $query_get_basket = mysqli_prepare($db, file_get_contents("queries/get_basket.mysql"));
 $query_remove_from_basket = mysqli_prepare($db, file_get_contents("queries/remove_from_basket.mysql"));
 $query_submit_basket = mysqli_prepare($db, file_get_contents("queries/submit_basket.mysql"));
+$query_create_order = mysqli_prepare($db, file_get_contents("queries/create_order.mysql"));
 ?>

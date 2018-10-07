@@ -11,5 +11,3 @@ INSERT INTO USERS (
 	CARD_OWNER,
 	CARD_EXPIRY
 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-
-INSERT INTO ORDERS (USERNAME) VALUES (?);

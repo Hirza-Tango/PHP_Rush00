@@ -1,14 +1,14 @@
 <?php
 	session_start();
-	include("auth.php");
-	if (auth($_GET['login'], $_GET['passwd']))
+	require_once("sql.php");
+	//var_dump($_POST['email'], hash("sha512",$_POST['passwd']));
+	$result = auth($_POST['email'], $_POST['passwd']);
+	global $db;
+	if ($result)
 	{
-		$_SESSION['loggued_on_user'] = $_GET['login'];
-		echo "OK\n";
+		$_SESSION['username'] = $_POST['email'];
+		echo"OK";
 	}
 	else
-	{
-		$_SESSION['loggued_on_user'] = '';
-		echo "ERROR\n";
-	}
+		echo "Error: ".mysqli_error($db);
 ?>
