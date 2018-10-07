@@ -24,7 +24,7 @@
             </div>
         </div>   
         <div id = "cen"> 
-            <h1>  Bill  </h1>
+            <h1 style="text-align: left; font-family:monospace">  Bill  </h1>
         <table>
             <tr>
                 <th>Products </th>
