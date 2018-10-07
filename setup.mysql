@@ -84,4 +84,5 @@ INSERT INTO PRODUCT_CATEGORIES (CATEGORY_NAME, PRODUCT_NAME) VALUES
 ("Chocolates", "Chocolate log"),
 ("Chocolates", "Bar one"),
 ("Soft drinks", "Coke"),
-("Sweets", "Chocolate log");
+("Sweets", "Chocolate log"),
+("Energy Drinks", "Coke");
