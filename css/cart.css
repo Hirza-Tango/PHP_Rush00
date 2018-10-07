@@ -69,17 +69,45 @@ table
 {
     padding: 10px;
     border-bottom: 1px solid gray;
+    font-size: 150%;
+}
+tr
+{
+    padding: 10px;
+}
+td
+{
+    padding: 10px;
+    font-family: monospace;
+    text-align: left;
 }
 input:hover
 {
     background: brown;
     color: white;
+    border-bottom: 2px solid black;
 }
 input
 {
     outline: none;
     border: none;
-    background-color: white;
-    padding: 20px 10px;
+    background-color:transparent;
+    border-bottom: 2px solid gray;
+    font-size: 150%;
+}
+#cen
+{
+    height: 500px;
+    width: 500px;
+    padding-left: 50px;
+    text-align: center;
+    left:40%;
+    top: 50%;
+    position: relative;
+}
+#cen input
+{
+    outline: none;
+    border: none;
     border-bottom: 2px solid black;
 }
