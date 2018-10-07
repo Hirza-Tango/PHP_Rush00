@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/signup.css" />
+</head>
+<body>
+        <div id="head">
+                <img src="/img/Screen Shot 2018-10-06 at 23.15.37.png" height="70" width="250">
+                <div id="right">
+                    <a href="signup.html">Sign Up</a> 
+                    <a href="login.html">Login</a>
+                    <a href="cart.html"><img  src= "/img/cart-icon-14 (1).png" height="40" ></a>
+                </div>
+           </div>  
+           <div id = "signup" >
+                <form action="editprofile.php" method= "post">
+                        <img src = "img/download.jpeg">
+                        <br/>
+                        <p style="font-family:monospace">Edit Profile</p>
+                        Name : <input type="text" placeholder="Name" name="name"/>
+                        <br/>
+                         Lastname : <input type="text" placeholder="Lastname" name="lastname"/>
+                         <br/>
+                      Email : <input type="email" placeholder="example@domain.com" name="email"/>
+                     <br/>
+                     Password : <input type="password" placeholder="*******" name="passwd"/>
+                     <br/>
+                     Phone number :   <select><option>+27</option></select><input type="text" placeholder="63 000 0000" name="phone"/>
+                     <br/>
+                     <p id= "lbl"></p>Address : </p><input type="text" placeholder="Line" name="line1"/>
+                     <br/>
+                     <input type="text" placeholder="Line2" name="line2"/>
+                     <br/>
+                     <input type="text" placeholder="City" name="city"/>
+                     <br/>
+                     <input type="text" placeholder="Postal Code" name="postcode"/>
+                     <br/>
+                     <p id= "lbl">Payment Details :</p> <input type="text" placeholder="Card Number" name="card_no"/>
+                     <br/>
+                     <input type="text" placeholder="Card Holder" name="card_holder"/>
+                     <br/> 
+                     <input type="text" placeholder="YYYY-MM" name="card_expiry"/>
+                     <br/>
+                     <input type="checkbox" name="checkTC" checked/> Accept Terms & Conditions 
+                     <br/>
+                     <input type="submit" value="signup" name="signup"/>
+                 <form>
+</body>
+</html>
