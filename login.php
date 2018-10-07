@@ -6,8 +6,14 @@
 	if ($result)
 	{
 		$_SESSION['username'] = $_POST['email'];
-		echo"OK";
+		echo"Login successful. Redirecting...";
+		sleep(2);
+		header("Location: index.html");
 	}
 	else
-		echo "Error: ".mysqli_error($db);
+	{
+		echo "Login failed";
+		sleep(2);
+		header("Location: login.html");
+	}
 ?>
