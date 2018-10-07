@@ -39,7 +39,8 @@ function auth($username, $passwd) {
 	global $query_auth;
 	mysqli_stmt_bind_param($query_auth, "ss", $username, hash("sha512", $passwd));
 	mysqli_stmt_execute($query_auth);
-	$result = mysqli_stmt_fetch($query_auth);
+	mysqli_stmt_bind_result($query_auth, $result);
+	mysqli_stmt_fetch($query_auth);
 	mysqli_stmt_close($query_auth);
 	return ($result);
 }

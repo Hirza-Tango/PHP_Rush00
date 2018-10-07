@@ -6,9 +6,10 @@
 	if ($result)
 	{
 		$_SESSION['username'] = $_POST['email'];
+		$_SESSION['full_name'] = $result;
 		echo"Login successful. Redirecting...";
 		sleep(2);
-		header("Location: index.html");
+		header("Location: index.php");
 	}
 	else
 	{
