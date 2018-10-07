@@ -15,9 +15,9 @@
 			session_start();
 			if ($_SESSION['username']) {
 				echo "<h3>Welcome, ", $_SESSION['full_name'], "</h3>";
+				echo '<a href="logout.php">Logout</a>';
 			} else {
-				echo '<a href="signup.html">Sign Up</a>
-							<a href="login.html">Login</a>';
+				echo '<a href="signup.html">Sign Up</a><a href="login.html">Login</a>';
 			}
 			?>
 			<a href="cart.html"><img src= "/img/cart-icon-14 (1).png" height="40" style="float:right"></a>
@@ -26,22 +26,22 @@
 	<div id = "page">
 		<table>
 			<tr>
-				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/style-mens-formal-trouser-500x500.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/shirt.jpeg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/iphones8-plus-x.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
+				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/style-mens-formal-trouser-500x500.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="2"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/shirt.jpeg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="3"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/iphones8-plus-x.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="4"></form></td>
 			</tr>
 			<tr>
-				<td><p id = "pname">Name :</p><img src = "/img/free-ny-white-caps-0111-friendskart-original-imaf2zdxxcgn2sph.jpeg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/Reeva-Fashion-Jewellery-Golden-Necklace-SDL947515141-1-647cf.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/klein-tools-electricians-tool-sets-mpz00050r-64_1000.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
+				<td><p id = "pname">Name :</p><img src = "/img/free-ny-white-caps-0111-friendskart-original-imaf2zdxxcgn2sph.jpeg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/Reeva-Fashion-Jewellery-Golden-Necklace-SDL947515141-1-647cf.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/klein-tools-electricians-tool-sets-mpz00050r-64_1000.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
 			</tr>
 			<tr>
-				<td><p id = "pname">Name :</p><img src = "/img/51s7SMOXbSL.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
-				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><input type="button" value="AddtoCart" name="1"></td>
+				<td><p id = "pname">Name :</p><img src = "/img/51s7SMOXbSL.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
+				<td><p id = "pname">Name :</p><img src = "/img/818tfvtAGLL._SL1500_.jpg" height="450" width= "450"><p id = "pprice">Price : R100 </p><form action="addtocart.php" method="post"><input type="button" value="AddtoCart" name="1"></form></td>
 			</tr>
 		</table>
 	</div>
