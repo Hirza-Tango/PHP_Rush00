@@ -33,8 +33,8 @@
     </div>
     <div id = "page">
         <?php
-        require_once("sql.php");
-        foreach (get_all_products() as $e)
+		require_once("sql.php");
+        foreach (get_products("Chips") as $e)
         {
             echo '<div class="grid_item"><p id = "pname">',
                 $e[0], '</p><img src = "',

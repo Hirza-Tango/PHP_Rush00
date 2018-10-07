@@ -112,7 +112,9 @@ function get_products($category){
 	global $query_get_products;
 	mysqli_stmt_bind_param($query_get_products, "s", $category);
 	mysqli_stmt_execute($query_get_products);
-	while ($result[] = mysqli_stmt_get_result($query_get_products));
+	mysqli_stmt_bind_result($query_get_products, $a, $b, $c, $d);
+	while (mysqli_stmt_fetch($query_get_products))
+		$result[] = Array($a, $b, $d);
 	mysqli_stmt_close($query_get_products);
 	return($result);
 }
@@ -128,8 +130,11 @@ function get_all_products(){
 }
 
 function add_to_basket($product, $username){
+	global $query_add_to_basket;
 	mysqli_stmt_bind_param($query_add_to_basket, "ss", $username, $product);
-	return(mysqli_stmt_execute($query_add_to_basket));
+	$result = mysqli_stmt_execute($query_add_to_basket);
+	mysqli_stmt_close($query_add_to_basket);
+	return ($result);
 }
 
 function get_basket($username){
