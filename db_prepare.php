@@ -11,6 +11,7 @@ $query_unsuspend_user = mysqli_prepare($db, file_get_contents("queries/unsuspend
 $query_add_product = mysqli_prepare($db, file_get_contents("queries/add_product.mysql"));
 $query_add_category = mysqli_prepare($db, file_get_contents("queries/add_category.mysql"));
 $query_get_products = mysqli_prepare($db, file_get_contents("queries/get_products.mysql"));
+$query_get_all_products = mysqli_prepare($db, file_get_contents("queries/get_all_products.mysql"));
 $query_add_product_to_category = mysqli_prepare($db, file_get_contents("queries/add_product_to_category.mysql"));
 $query_add_to_basket = mysqli_prepare($db, file_get_contents("queries/add_to_basket.mysql"));
 $query_get_basket = mysqli_prepare($db, file_get_contents("queries/get_basket.mysql"));

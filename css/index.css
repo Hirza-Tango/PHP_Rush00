@@ -51,12 +51,7 @@ body
     border-radius: 1%;
     color: white;
 }
-table
-{
-    padding: 10px;
-    border-bottom: 1px solid gray;
-}
-table td
+.grid_item
 {
     text-align: center;
     position: relative;
@@ -74,14 +69,14 @@ table td
     position: relative;
     color: white;
 }
-table td input[type="button"]
+.grid_item input[type="button"]
 {
     width: 40%;
     font-weight: bold;
     border: 1px solid gray;
     padding: 20px;
 }
-table td input[type="button"]:hover
+.grid_item input[type="button"]:hover
 {
     width: 40%;
     font-weight: bold;
@@ -111,4 +106,9 @@ table td input[type="button"]:hover
     left:30%;
     top:1%;
     position: absolute;
+}
+#page
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }

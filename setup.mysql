@@ -51,3 +51,37 @@ CREATE TABLE BASKET_ITEMS (
 	FOREIGN KEY (ORDER_ID) REFERENCES ORDERS(ORDER_ID),
 	FOREIGN KEY (PRODUCT_NAME) REFERENCES PRODUCTS(PRODUCT_NAME)
 );
+
+INSERT INTO CATEGORIES (CATEGORY_NAME) VALUES
+("Energy Drinks"), ("Sweets"), ("Chips"), ("Chocolates"), ("Soft drinks");
+
+INSERT INTO PRODUCTS (PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_DESCRIPTION, PRODUCT_IMAGE)
+VALUES
+("Dragon - Blue", 10, NULL, "https://4.imimg.com/data4/PE/OD/MY-19363834/dragon-blue-energy-drink-500x500.jpg"),
+("Dragon - Red", 10, NULL, "http://youthvillage.co.zw/wp-content/uploads/dragon.jpg"),
+("Red bull", 22, NULL, "https://image.redbull.com/rbx00264/0100/0/406/products/packshots/global/INT_250_RBED_SingleUnit_closed_cold_front.png"),
+("Play", 15, NULL, "https://cdn.shopify.com/s/files/1/2788/1238/products/a61b5a8a681490ccaf8a8e6db70bbe00_1024x1024.png?v=1521496194"),
+("Switch", 15, NULL, "http://www.drinkswitch.co.za/wp-content/uploads/2018/02/newhirespngred.png"),
+("Wine gums", 14, NULL, "https://www.makro.co.za/Images/Products/Large/MIN_92585012_CSA.jpg?v=20160306"),
+("Liqorice allsorts", 16, NULL, "http://www.buysouthafricaonline.co.uk/WebRoot/BT2/Shops/Store2_002E_Shop1763/4B8F/D688/4D85/BA70/B425/0A0A/33E7/B1C4/item_id242_ml.jpg"),
+("Doritos - Cheese", 6, NULL, "http://www.vendteccapetown.co.za/vendtec/wp-content/uploads/2014/11/cheese11.png"),
+("Doritos - Sweet chilli", 6, NULL, "https://cdn.shopify.com/s/files/1/0812/2097/products/Doritos-Sweet-Chilli-Pepper_1024x1024.png?v=1528391255"),
+("Lays - Sour Cream & onion", 5, NULL, "https://www.makro.co.za/Images/Products/Large/MIN_199316003_CSA.jpg?v=20160308"),
+("Chocolate log", 13, NULL, "https://www.sanza.co.uk/pics/3903.jpg"),
+("Bar one", 13, NULL, "https://www.game.co.za/medias/769163-515x515.jpg?context=bWFzdGVyfGltYWdlc3w3NDk1NHxpbWFnZS9qcGVnfGltYWdlcy9oZWIvaDQ3Lzg4Mzk1NTQ1OTY4OTQuanBnfDE1ZDU3OTkxNDg0YzNlMWZlODA0YTk4ZTlmN2RmN2RmNTM1YmQxMzY5M2Q3ODhiOGNiZWI0MTQ2MGM5NzVkM2I"),
+("Coke", 12, NULL, "https://lh3.googleusercontent.com/DLMH0bXnMMTEaZ2QqXYWtNSre5sc2WSGUVgzYiY1gwFCPSr5k_OMJvejNm5UcskJq7NgjAG4aT-8-7aDxPEe=s1125");
+
+INSERT INTO PRODUCT_CATEGORIES (CATEGORY_NAME, PRODUCT_NAME) VALUES
+("Energy Drinks", "Dragon - Blue"),
+("Energy Drinks", "Dragon - Red"),
+("Energy Drinks", "Red bull"),
+("Energy Drinks", "Switch"),
+("Sweets", "Wine gums"),
+("Sweets", "Liqorice allsorts"),
+("Chips", "Doritos - Cheese"),
+("Chips", "Doritos - Sweet chilli"),
+("Chips", "Lays - Sour Cream & onion"),
+("Chocolates", "Chocolate log"),
+("Chocolates", "Bar one"),
+("Soft drinks", "Coke"),
+("Sweets", "Chocolate log");
