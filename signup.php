@@ -11,13 +11,13 @@ if (create_user($user))
 {
 	echo "User successfully created. Redirecting...";
 	sleep(2);
-	header("Location: index.html");
+	header("Location: login.html");
 }
 else
 {
 	echo "Error: ".mysqli_error($db);
 	sleep(2);
-	header("Location: index.html");
+	header("Location: index.php");
 }
 exit();
 ?>
