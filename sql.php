@@ -54,15 +54,16 @@ function get_user($username) {
 }
 
 function update_user($user_form){
-	mysqli_stmt_bind_param($query_update_user, "ssssssssss",
+	global $query_update_user;
+	return mysqli_stmt_bind_param($query_update_user, "ssssssssss",
 		$user_form['full_name'],
-		$user_form['address_line_1'],
-		$user_form['address_line_2'],
-		$user_form['address_city'],
-		$user_form['address_postcode'],
+		$user_form['line1'],
+		$user_form['line2'],
+		$user_form['city'],
+		$user_form['postcode'],
 		$user_form['phone'],
 		$user_form['card_no'],
-		$user_form['card_owner'],
+		$user_form['card_holder'],
 		$user_form['card_expiry'],
 		$user_form['username']
 	);

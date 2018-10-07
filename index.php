@@ -24,6 +24,7 @@
             if ($_SESSION['username']) {
                 echo "<h3>Welcome, ", $_SESSION['full_name'], "</h3>";
                 echo '<a href="logout.php">Logout</a>';
+                echo '<a href="editprofile.html">Edit profile</a>';
             } else {
                 echo '<a href="signup.html">Sign Up</a><a href="login.html">Login</a>';
             }
